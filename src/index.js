@@ -1,8 +1,3 @@
-const a = () => {
-  console.log(a)
-  alert(1);
-}
+import ImgLazyLoad from './code'
 
-a();
-
-export default a;
+export default ImgLazyLoad;
