@@ -40,3 +40,5 @@ windowImgLoad.distroryed();
 refresh()      重新初始化加载图片（用于无限滚动或者分页)
 distroryed()   销毁滚动事件
 ```
+
+### QQ交流群：475870039
