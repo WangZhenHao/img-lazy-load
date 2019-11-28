@@ -106,9 +106,10 @@
     if (el === window) {
       var _document$documentEle = document.documentElement,
           scrollTop = _document$documentEle.scrollTop,
-          scrollLeft = _document$documentEle.scrollLeft,
-          clientWidth = _document$documentEle.clientWidth,
-          clientHeight = _document$documentEle.clientHeight;
+          scrollLeft = _document$documentEle.scrollLeft;
+      var _window = window,
+          clientHeight = _window.innerHeight,
+          clientWidth = _window.innerWidth;
       pos = {
         scrollTop: scrollTop,
         scrollLeft: scrollLeft,
@@ -213,7 +214,7 @@
       };
 
       this.imgLazyLoadError = function (el, event) {
-        el.load = true;
+        el.imgLoad = false;
 
         _this.errorLoad(el, event);
       };
@@ -248,7 +249,7 @@
       this._getImgElementMap();
     },
     distroryed: function distroryed() {
-      removeEvent(this.lazyLoadWrap, 'scroll', this.scrollHandle);
+      removeEvent(this.scrollWrap, 'scroll', this.scrollHandle);
     }
   };
 

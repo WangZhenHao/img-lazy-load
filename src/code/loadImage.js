@@ -65,9 +65,11 @@ export function getScrollRect (el) {
     let {
       scrollTop,
       scrollLeft,
-      clientWidth,
-      clientHeight
+      // clientWidth,
+      // clientHeight
     } = document.documentElement;
+
+    let { innerHeight: clientHeight, innerWidth: clientWidth } = window
 
     pos = {
       scrollTop,

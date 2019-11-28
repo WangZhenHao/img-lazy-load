@@ -98,7 +98,7 @@ ImgLazyLoad.prototype = {
     }
 
     this.imgLazyLoadError = (el, event) => {
-      el.load = true;
+      el.imgLoad = false;
       this.errorLoad(el, event)
     }
   },
@@ -134,7 +134,7 @@ ImgLazyLoad.prototype = {
     this._getImgElementMap();
   },
   distroryed () {
-    removeEvent(this.lazyLoadWrap, 'scroll', this.scrollHandle, false);
+    removeEvent(this.scrollWrap, 'scroll', this.scrollHandle, false);
   }
 }
 
