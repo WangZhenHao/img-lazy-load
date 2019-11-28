@@ -6,7 +6,7 @@
 [预览地址](https://wangzhenhao.github.io/img-lazy-load/)
 
 ```
-注意: 使用插件之前需要把页面的布局左右，图片容器需要设置宽度和高度
+注意: 使用插件之前需要用css把页面的布局好，图片容器一定需要设置宽度和高度
 
 
 var windowImgLoad = new ImgLazyLoad({
