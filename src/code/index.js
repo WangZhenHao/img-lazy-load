@@ -36,13 +36,13 @@ ImgLazyLoad.prototype = {
     }
 
 
-
     Object.assign(this, DEFAULT, options);
   },
   initDom () {
     this.lazyLoadWrap = this.el ? document.querySelector(this.el) : document;
 
     this.scrollWrap = this.target === window ? this.target : this.lazyLoadWrap;
+
     // this.scrollWrapOffset = getElOffset(this.scrollWrap);
     this._getImgElementMap();
   },
@@ -103,7 +103,6 @@ ImgLazyLoad.prototype = {
     }
   },
   renderImg () {
-
     let {
       scrollTop,
       scrollLeft,
@@ -117,7 +116,7 @@ ImgLazyLoad.prototype = {
       top: scrollTop + offsetTop + this.distance + clientHeight,
       left: scrollLeft + offsetLeft + this.distance + clientWidth
     }
-
+    console.log(scrollTop)
     for (let i in this.imgElementMap) {
       let imgElement = this.imgElementMap[i];
       let imgElementTopLeft = {

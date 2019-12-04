@@ -59,17 +59,32 @@ export function inView (scrollOffset, imgElementOffset) {
   return bel;
 }
 
+/**
+ * 如果在head引入该js，document.body就会是null,建议在body内引入改js
+ */
+// const BODYSCROLL = isPc() ? document.documentElement : document.body ? document.body : document.documentElement;
+// // alert(document.documentElement)
+// // alert('pc: ' + isPc())
+// alert('document.body: ' + BODYSCROLL);
+// setTimeout(() => {
+//   alert('document.body: ' + document.body);
+// }, 0)
+
+// alert(BODYSCROLL === document.body)
+
 export function getScrollRect (el) {
   let pos = {}
   if (el === window) {
-    let {
-      scrollTop,
-      scrollLeft,
-      // clientWidth,
-      // clientHeight
-    } = document.documentElement;
+    // let {
+    //   scrollTop,
+    //   scrollLeft,
+    //   // clientWidth,
+    //   // clientHeight
+    // } = BODYSCROLL;
+    let scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+    let scrollLeft = document.body.scrollLeft || document.documentElement.scrollLeft;
 
-    let { innerHeight: clientHeight, innerWidth: clientWidth } = window
+    let { innerHeight: clientHeight, innerWidth: clientWidth } = window;
 
     pos = {
       scrollTop,

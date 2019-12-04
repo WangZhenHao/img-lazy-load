@@ -100,13 +100,30 @@
     var bel = scrollOffset.top >= imgElementOffset.top && scrollOffset.left >= imgElementOffset.left;
     return bel;
   }
+  /**
+   * 如果在head引入该js，document.body就会是null,建议在body内引入改js
+   */
+  // const BODYSCROLL = isPc() ? document.documentElement : document.body ? document.body : document.documentElement;
+  // // alert(document.documentElement)
+  // // alert('pc: ' + isPc())
+  // alert('document.body: ' + BODYSCROLL);
+  // setTimeout(() => {
+  //   alert('document.body: ' + document.body);
+  // }, 0)
+  // alert(BODYSCROLL === document.body)
+
   function getScrollRect(el) {
     var pos = {};
 
     if (el === window) {
-      var _document$documentEle = document.documentElement,
-          scrollTop = _document$documentEle.scrollTop,
-          scrollLeft = _document$documentEle.scrollLeft;
+      // let {
+      //   scrollTop,
+      //   scrollLeft,
+      //   // clientWidth,
+      //   // clientHeight
+      // } = BODYSCROLL;
+      var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+      var scrollLeft = document.body.scrollLeft || document.documentElement.scrollLeft;
       var _window = window,
           clientHeight = _window.innerHeight,
           clientWidth = _window.innerWidth;
@@ -232,6 +249,7 @@
         top: scrollTop + offsetTop + this.distance + clientHeight,
         left: scrollLeft + offsetLeft + this.distance + clientWidth
       };
+      console.log(scrollTop);
 
       for (var i in this.imgElementMap) {
         var imgElement = this.imgElementMap[i];
