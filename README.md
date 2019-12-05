@@ -7,7 +7,7 @@
 
 ### 1: npm引入
 ```
-npm i -D i-lazy-load
+npm i -S i-lazy-load
 ```
 ### 2：获取dist目录下面文件
 

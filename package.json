@@ -1,6 +1,6 @@
 {
   "name": "i-lazy-load",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "a javascript lazy-load plugin",
   "main": "dist/img-lazy-load.js",
   "files": [
