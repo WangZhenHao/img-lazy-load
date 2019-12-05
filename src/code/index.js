@@ -116,7 +116,7 @@ ImgLazyLoad.prototype = {
       top: scrollTop + offsetTop + this.distance + clientHeight,
       left: scrollLeft + offsetLeft + this.distance + clientWidth
     }
-    console.log(scrollTop)
+    
     for (let i in this.imgElementMap) {
       let imgElement = this.imgElementMap[i];
       let imgElementTopLeft = {
