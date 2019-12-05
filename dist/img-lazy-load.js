@@ -249,7 +249,6 @@
         top: scrollTop + offsetTop + this.distance + clientHeight,
         left: scrollLeft + offsetLeft + this.distance + clientWidth
       };
-      console.log(scrollTop);
 
       for (var i in this.imgElementMap) {
         var imgElement = this.imgElementMap[i];
