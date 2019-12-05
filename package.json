@@ -1,8 +1,13 @@
 {
-  "name": "img-lazy-load",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "i-lazy-load",
+  "version": "1.0.2",
+  "description": "a javascript lazy-load plugin",
+  "main": "dist/img-lazy-load.js",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "private": false,
   "scripts": {
     "dev": "rollup --config build/rollup.config.dev.js --watch",
     "build": "node build/rollup.config.prod.js",
