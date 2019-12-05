@@ -5,9 +5,11 @@
 
 [预览地址](https://wangzhenhao.github.io/img-lazy-load/example/demo.html)
 
+### 1: npm引入
 ```
 npm i -D i-lazy-load
 ```
+### 2：获取dist目录下面文件
 
 ```
 注意: 使用插件之前需要用css把页面的布局好，图片容器一定需要设置宽度和高度
