@@ -3,6 +3,7 @@
 ### 页面多块区域垂直水平滚动后的图片懒加载
 
 [git地址](https://github.com/WangZhenHao/img-lazy-load)
+
 [案例预览地址](https://wangzhenhao.github.io/img-lazy-load/example/demo.html)
 
 ### 1: npm引入
