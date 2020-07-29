@@ -2,7 +2,7 @@
 
 ### 页面多块区域垂直水平滚动后的图片懒加载
 
-![calendar](https://github.com/WangZhenHao/plugin-collect/blob/master/example/1.png)
+![img-lazy-load](https://github.com/WangZhenHao/img-lazy-load/blob/master/example/1.png)
 
 [git地址](https://github.com/WangZhenHao/img-lazy-load)
 
